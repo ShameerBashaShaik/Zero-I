@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel – WelfareConnect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 WelfareConnect Admin Dashboard</h1>
+    <button id="connectAdminWallet">Connect Admin Wallet</button>
+
+    <div class="status">
+      <p><strong>Admin Wallet:</strong> <span id="adminWallet">Not Connected</span></p>
+    </div>
+
+    <hr />
+
+    <div class="register">
+      <h3>Register New Beneficiary</h3>
+      <input type="text" id="beneficiaryAddress" placeholder="0xRecipientAddress" />
+      <button id="registerBtn">Register Beneficiary</button>
+    </div>
+
+    <div class="distribute">
+      <h3>Distribute Funds</h3>
+      <input type="text" id="recipientAddress" placeholder="0xRecipientAddress" />
+      <button id="distributeBtn">Send Funds</button>
+    </div>
+
+    <div id="adminFeedback"></div>
+  </div>
+
+  <!-- Load ethers.js before anything -->
+  <script src="js/ethers.min.js"></script>
+
+  <!-- Updated script: no type="module" needed -->
+  <script src="admin.js"></script>
+</body>
+</html>

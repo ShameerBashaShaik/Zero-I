@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WelfareConnect – Beneficiary Portal</title>
+  <link rel="stylesheet" href="indexs.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>WelfareConnect</h1>
+    <button id="connectWallet">Connect Wallet</button>
+
+    <div class="status">
+      <p><strong>Wallet:</strong> <span id="walletAddress">Not Connected</span></p>
+      <p><strong>Eligibility:</strong> <span id="eligibilityStatus">Unknown</span></p>
+      <p><strong>Available Funds:</strong> <span id="availableFunds">-- ETH</span></p>
+    </div>
+
+    <div class="actions">
+      <button id="checkEligibility">Check Eligibility</button>
+      <button id="requestFunds" disabled title="Only admin can send funds">Request Funds</button>
+    </div>
+
+    <div id="feedback" style="margin-top: 1rem; font-weight: bold;"></div>
+  </div>
+
+  <!-- 🟢 First include ethers (NO module type) -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+
+  <!-- 🟢 Then include your custom logic -->
+  <script src="user.js" type="module"></script>
+</body>
+</html>
